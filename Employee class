@@ -1,0 +1,128 @@
+private string employeeNumber;
+        private string employeeFirstName;
+        private string employeeLastName;
+        private string dateOfHire;
+        private string jobDescription;
+        private string department;
+        private decimal monthlySalary;
+
+        public Objects()
+        {
+
+        }
+        public Objects(string jobDesc, string dept, decimal salary)
+        {
+            this.jobDescription = jobDesc;
+            this.department = dept;
+            this.monthlySalary = salary;
+        }
+        public Objects(string empNum, string empName, string empSurname, string hireDate, string desc,
+            string dept, decimal salary)
+        {
+            this.employeeNumber = empNum;
+            this.employeeFirstName = empName;
+            this.employeeLastName = empSurname;
+            this.DateOfHire = hireDate;
+            this.jobDescription = desc;
+            this.department = dept;
+            this.monthlySalary = salary;
+        }
+
+        public string EmployeeNumber
+        {
+            get
+            {
+                return this.employeeNumber;
+            }
+            set
+            {
+                this.employeeNumber = value;
+            }
+        }
+        public string EmployeeFirstName
+        {
+            get
+            {
+                return this.employeeFirstName;
+            }
+            set
+            {
+                this.employeeFirstName = value;
+            }
+        }
+public string EmployeeLastName
+        {
+            get
+            {
+                return this.employeeLastName;
+            }
+            set
+            {
+                this.employeeLastName = value;
+            }
+        }
+        public string DateOfHire
+        {
+            get
+            {
+                return this.dateOfHire;
+            }
+            set
+            {
+                this.dateOfHire = value;
+            }
+        }
+        public string JobDescription
+        {
+            get
+            {
+                return this.jobDescription;
+            }
+            set
+            {
+                this.jobDescription = value;
+            }
+        }
+        public string Department
+        {
+            get
+            {
+                return this.department;
+            }
+            set
+            {
+                this.department = value;
+            }
+        }
+public decimal MonthlySalary
+        {
+            get
+            {
+                return this.monthlySalary;
+            }
+            set
+            {
+                this.monthlySalary = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"\nYour employee details include the following:" +
+                    "\nYour full name is " + EmployeeFirstName.ToString() + " " 
+                    + EmployeeLastName.ToString() + "." + "\nYou employee number is " 
+                    +EmployeeNumber.ToString() +
+                    "\nYou were hired on the " +DateOfHire.ToString() + " to work in the " +Department.ToString()
+                    + " department." + "\nYour job description includes: " + JobDescription.ToString() +
+                    "\nAnd your monthly salary is: R" + MonthlySalary.ToString();
+        }
+
+        public string FullNameDetails()
+        {
+            return $"Your full name is {employeeFirstName} {employeeLastName}";
+        }
+
+        public string SortedFullNameDetails()
+        {
+            return $"Your full name is {employeeLastName}, {employeeFirstName}";
+        }
