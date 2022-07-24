@@ -1,0 +1,50 @@
+            string hireDate = "3 February 2014";
+            decimal salary = 25000.00M;
+
+            var objects = new Objects();
+            WriteLine("Please enter your employee number");
+            string empNum = ReadLine();
+            objects.EmployeeNumber = empNum;
+            WriteLine("Please enter your employee first name");
+            string empName = ReadLine();
+            objects.EmployeeFirstName = empName;
+            WriteLine("Please enter your employee last name");
+            string empLast = ReadLine();
+            objects.EmployeeLastName = empLast;
+            WriteLine("Please enter your job decription");
+            string jobDesc = ReadLine();
+            objects.JobDescription = jobDesc;
+            WriteLine("Please specify your work department");
+            string dept = ReadLine();
+            objects.Department = dept;
+
+            objects.DateOfHire = hireDate;
+            objects.MonthlySalary = salary;
+
+            WriteLine(objects);
+            Objects objects1 = new Objects("Balancing books", "Accounting", 56000.00M);
+            WriteLine("\nYour employee details include the following: ");
+            string name = "Karabo";
+            string surname = "Tau";
+            string number = "54321";
+            string hiredDate = "8 June 2015";
+            objects1.EmployeeFirstName = name;
+            objects1.EmployeeLastName = surname;
+            objects1.EmployeeNumber = number;
+            objects1.DateOfHire = hiredDate;
+            WriteLine(objects1.FullNameDetails() + ".");
+            WriteLine("Your employee number is " + objects1.EmployeeNumber + ".");
+            WriteLine("You were hired on the " + objects1.DateOfHire + " to work in the " + objects1.Department + " department.");
+            WriteLine("Your job decription includes " + objects1.JobDescription + ".");
+            WriteLine("And your monthly salary is: R" + objects1.MonthlySalary);
+
+
+            Objects obj2 = new Objects("76543", "Thabang", "Modise", " 17 July 2012", "Programming", "IT", 75000.00M);
+            WriteLine("\nYour employee details include the following: ");
+            WriteLine("Your full name is " + obj2.EmployeeFirstName + " " + obj2.EmployeeLastName + ".");
+            WriteLine("Your employee number is " + obj2.EmployeeNumber + ".");
+            WriteLine("You were hired on the " + obj2.DateOfHire + " to work in the " + obj2.Department + " department.");
+            WriteLine("Your job decription includes " + obj2.JobDescription + ".");
+            WriteLine("And your monthly salary is: R" + obj2.MonthlySalary);
+
+            ReadLine();
